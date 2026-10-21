@@ -12,13 +12,13 @@ public class BooksDAO {
     public void addBook(Book book)throws SQLException{
         try( Connection con=DBConnection.getConnection()){
             PreparedStatement ps= con.prepareStatement(
-                "Insert into books(book_id, book_title,book_author,available) values(?,?,?,?)"
+                "Insert into books(book_title,book_author,available) values(?,?,?)"
             );
 
-            ps.setInt(1, book.getBookID());
-            ps.setString(2, book.getBookTitle());
-            ps.setString(3, book.getBookAuthor());
-            ps.setBoolean(4, book.isAvailable());
+            
+            ps.setString(1, book.getBookTitle());
+            ps.setString(2, book.getBookAuthor());
+            ps.setBoolean(3, book.isAvailable());
             ps.executeUpdate();
     }
   }
