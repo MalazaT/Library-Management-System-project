@@ -1,23 +1,23 @@
 package model;
 
 public class Book {
-    private int bookId;
+    private int bookID;
     private String bookTitle;
     private String bookAuthor;
     private boolean available;
 
 
 //Constructors
-   public Book(int bookId, String bookTitle, String bookAuthor, boolean available){
-    this.bookId= bookId;
+   public Book(int bookID, String bookTitle, String bookAuthor, boolean available){
+    this.bookID= bookID;
     this.bookTitle= bookTitle;
     this.bookAuthor= bookAuthor;
     this.available= available;
    } 
 
 //Getters
-public int getBookId(){
-return bookId;
+public int getBookID(){
+return bookID;
 }
 
 public String getBookTitle() {
@@ -33,8 +33,8 @@ public boolean isAvailable() {
 }
 
 //Setters
-public void setBookId(int bookId){
-    this.bookId= bookId;
+public void setBookID(int bookID){
+    this.bookID= bookID;
 }
 
 public void setBookTitle(String bookTitle) {
@@ -52,7 +52,7 @@ public void setAvailable(boolean available) {
 //To String method
 @Override 
 public String toString(){
-    return "Book[Book ID=" +bookId+ ",Book Title= "+bookTitle+" ,Author= "+bookAuthor+ ",Available= "+available+ "]";
+    return "Book[Book ID=" +bookID+ ",Book Title= "+bookTitle+" ,Author= "+bookAuthor+ ",Available= "+available+ "]";
 }
 
 }
